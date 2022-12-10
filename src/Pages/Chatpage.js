@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/layout";
+import { Box } from "@chakra-ui/react";
 import { useContext, useEffect, useState } from "react";
 import Chatbox from "../components/Chatbox";
 import MyChats from "../components/MyChats";
@@ -7,7 +7,6 @@ import { ChatContext } from "../Context/ChatProvider";
 
 const Chatpage = () => {
   const [fetchAgain, setFetchAgain] = useState(false);
-
   const {user,setUser}= useContext(ChatContext)  
   const local= JSON.parse(localStorage.getItem("userInfo"))
   
