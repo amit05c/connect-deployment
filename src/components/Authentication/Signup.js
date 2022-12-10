@@ -32,7 +32,7 @@ const Signup = () => {
         position: "bottom",
       });
       setPicLoading(false);
-      // return;
+      return;
     }
     if (password !== confirmpassword) {
       toast({
@@ -42,7 +42,7 @@ const Signup = () => {
         isClosable: true,
         position: "bottom",
       });
-      // return;
+      return;
     }
     console.log(name, email, password, pic);
     try {
@@ -73,7 +73,6 @@ const Signup = () => {
       localStorage.setItem("userInfo", JSON.stringify(data));
       localStorage.setItem("isAuth",JSON.stringify("true"))
       setPicLoading(false);
-      // history.push("/chats");
       navigate("/chats")
     } catch (error) {
       toast({
@@ -98,15 +97,15 @@ const Signup = () => {
         isClosable: true,
         position: "bottom",
       });
-      // return;
+      return;
     }
     console.log(pics);
     if (pics.type === "image/jpeg" || pics.type === "image/png") {
       const data = new FormData();
       data.append("file", pics);
-      data.append("upload_preset", "chat-app");
-      data.append("cloud_name", "piyushproj");
-      fetch("https://api.cloudinary.com/v1_1/piyushproj/image/upload", {
+      data.append("upload_preset", "connect_app");
+      data.append("cloud_name", "amitconnectapp");
+      fetch("https://api.cloudinary.com/v1_1/amitconnectapp/image/upload", {
         method: "post",
         body: data,
       })
@@ -129,7 +128,7 @@ const Signup = () => {
         position: "bottom",
       });
       setPicLoading(false);
-      // return;
+      return;
     }
   };
 
