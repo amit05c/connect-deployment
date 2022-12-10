@@ -71,6 +71,7 @@ const Signup = () => {
         position: "bottom",
       });
       localStorage.setItem("userInfo", JSON.stringify(data));
+      localStorage.setItem("isAuth",JSON.stringify("true"))
       setPicLoading(false);
       // history.push("/chats");
       navigate("/chats")
